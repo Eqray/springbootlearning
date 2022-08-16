@@ -32,7 +32,7 @@ public class JacksonTest {
 
         Artical artical1 = mapper.readValue(jsonStr, Artical.class);
 
-        System.out.println(artical1);
+        System.out.println(jsonStr);
     }
 
 }

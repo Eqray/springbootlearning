@@ -41,7 +41,7 @@ public class ArticalController {
 
 
         log.info("saveArtical" + artical);
-        return  CustomResponse.success();
+        return  CustomResponse.success(artical);
     }
 
 //    @RequestMapping(value = "/articales",method = RequestMethod.POST)
