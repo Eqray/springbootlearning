@@ -4,3 +4,24 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+9
+
+family:
+  family_name: "happy family"
+  father:
+    name: bio-father
+    age: 44
+  mother:
+    name: bio-mother
+    age: 42
+    alias:
+      - lovely
+      - Alice
+    child:
+      name: first born
+      age: 5
+      friends:
+        - hobby: football
+          sex: male
+        - hobby: basketball
+          sex: female
+

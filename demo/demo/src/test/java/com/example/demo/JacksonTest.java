@@ -1,17 +1,22 @@
 package com.example.demo;
 
 import com.example.demo.model.Artical;
+import com.example.demo.model.Family;
 import com.example.demo.model.Reader;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class JacksonTest {
-
+    @Resource
+    Family family;
     @Test
     void testJackson() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
@@ -32,7 +37,9 @@ public class JacksonTest {
 
         Artical artical1 = mapper.readValue(jsonStr, Artical.class);
 
-        System.out.println(jsonStr);
+        Family testFamily = new Family();
+
+        System.out.println(testFamily.toString());
     }
 
 }

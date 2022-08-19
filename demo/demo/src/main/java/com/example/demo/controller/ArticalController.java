@@ -2,8 +2,11 @@ package com.example.demo.controller;
 
 import com.example.demo.CustomResponse;
 import com.example.demo.model.Artical;
+import com.example.demo.model.Family;
 import com.example.demo.model.Reader;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
@@ -72,5 +75,13 @@ public class ArticalController {
 
         log.info("updateArtical" + id);
         return CustomResponse.success();
+    }
+
+    @RequestMapping(value="/test", method = RequestMethod.GET)
+    public String test(){
+
+        Family testFamily = new Family();
+
+        return testFamily.toString();
     }
 }
